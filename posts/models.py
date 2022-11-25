@@ -5,22 +5,20 @@ from django.contrib.auth.models import User
 class Post(models.Model):
 
     image_filter_choices = [
-        ('_1977', '1977'),
-        ('brannan', 'Brannan'),
+        ('brightness', 'Brightness'),
         ('earlybird', 'Earlybird'),
-        ('hudson', 'Hudson'),
+        ('sparkle', 'Sparkle'),
         ('inkwell', 'Inkwell'),
-        ('lofi', 'Lo-Fi'),
-        ('kelvin', 'Kelvin'),
+        ('awesome', 'Awesome'),
+        ('mystyle', 'MyStyle'),
         ('normal', 'Normal'),
-        ('nashville', 'Nashville'),
         ('rise', 'Rise'),
         ('toaster', 'Toaster'),
-        ('valencia', 'Valencia'),
-        ('walden', 'Walden'),
-        ('xpro2', 'X-pro II')
+        ('strange', 'Strange'),
+        ('beautiful', 'beautiful'),
+        ('zest', 'zest')
     ]
-    owner = models.ForeignKey(User, on_delete=models.CASCADE)
+    owner = models.ForeignKey(User, on_delete=models. CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255)
