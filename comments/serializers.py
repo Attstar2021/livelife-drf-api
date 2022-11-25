@@ -3,7 +3,7 @@ from .models import Comment
 
 
 class CommentSerializer(serializers.ModelSerializer):
-   
+
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
@@ -20,6 +20,7 @@ class CommentSerializer(serializers.ModelSerializer):
             'post', 'created_at', 'updated_at', 'content'
         ]
 
-    class CommentDetailSerializer(CommentSerializer):
 
-        post = serializers.ReadOnlyField(source='post.id')
+class CommentDetailSerializer(CommentSerializer):
+
+    post = serializers.ReadOnlyField(source='post.id')
