@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'cloudinary',
     'rest_framework',
-    'django-filters',
+    'django_filters',
+
 
     'profiles',
     'posts',
