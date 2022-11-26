@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from rest_framework import generics, permissions
 from livelife_api.permissions import IsOwnerOrReadOnly
 from .models import Like
