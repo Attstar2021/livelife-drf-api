@@ -4,5 +4,5 @@ from rest_framework.response import Response
 @api_view()
 def root_route(request):
     return Response(
-        {"message": "Welcome to my Live life API!"}
+        {"message": "Welcome to Live life API!"}
     )
