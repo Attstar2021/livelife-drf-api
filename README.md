@@ -37,7 +37,7 @@ The project was deployed to GitHub Pages using the following steps...
 
 ------
 
-## heading
+## Manual Testing
 
 ** Sub-heading **
 
