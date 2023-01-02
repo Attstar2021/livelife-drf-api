@@ -2,21 +2,29 @@
 
 
 
-
 ## Deployment
 
-### GitHub Pages
+### Deployment steps
+#### set the following environment variables in env.py and setting.py:
+1. CLIENT_ORIGIN
+2. CLOUDINARY_URL
+3. DATABASE_URL
+4. DISABLE_COLLECTSTATIC
+5. SECRET_KEY
 
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
-
+#### Installed the following libraries to handle database connection:
+- psycopg2
+- dj-database-url
+- 
+#### Then,
+- configured dj-rest-auth library for JWTs
+- set allowed hosts
+- configured CORS (set allowed_origins)
+- set default renderer to JSON
+- added Procfile with release and web commands
+- gitignored the env.py file
+- generated requirements.txt
+- deployed to Heroku (Please see the steps given below)
 
 ### Heroku
 
@@ -45,64 +53,40 @@ The project was deployed to GitHub Pages using the following steps...
 
 ### Languages Used
 
--   [HTML5](https://en.wikipedia.org/wiki/HTML5)
--   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
--   [JAVASCRIPT](https://en.wikipedia.org/wiki/JavaScript)
 -   [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language))
 -   [POSTGRESQL](https://en.wikipedia.org/wiki/PostgreSQL)
 
 ### Frameworks, Libraries & Programs Used
 
-1. [ReactJS:](https://en.wikipedia.org/wiki/React_(JavaScript_library)) 
- - React was use as a front-end JavaScript library for building user interfaces based on UI components.
-2. [Django REST Framework:](https://en.wikipedia.org/wiki/Django_(web_framework))
+1. [Django REST Framework:](https://en.wikipedia.org/wiki/Django_(web_framework))
  - DRF was used for back-end API.
-4. [ElephentSQL:](https://www.elephantsql.com/)
- -  Elephant was used for SQL queries to create, read, update and delete data directly from my web browser.
-5. [ReactBootstrap 4.4.1:](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
- - Bootstrap was used to assist with the responsiveness and styling of the website.  
-6. [Hover.css:](https://ianlunn.github.io/Hover/)
- - Hover.css was used on the Social Media icons in the footer to add the float transition while being hovered over.    
-7. [Google Fonts:](https://fonts.google.com/)
- - Google fonts were used to import the 'Titillium Web' font into the style.css file which is used on all pages throughout the project.     
-8. [Font Awesome:](https://fontawesome.com/)
- - Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.    
-9. [Git](https://git-scm.com/)
+2. [ElephentSQL:](https://www.elephantsql.com/)
+ -  Elephant was used for SQL queries to create, read, update and delete data directly from my web browser.    
+3. [Git](https://git-scm.com/)
  - Git was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
-10. [GitHub:](https://github.com/)
+4. [GitHub:](https://github.com/)
  - GitHub is used to store the projects code after being pushed from Git
-11. [Cloudinary:](https://en.wikipedia.org/wiki/Cloudinary)
+5. [Cloudinary:](https://en.wikipedia.org/wiki/Cloudinary)
  - Cloudinary was used for to upload images and to store, manage, manipulate, and deliver for websites and apps.
-12. [JustinMind:](https://en.wikipedia.org/wiki/Justinmind_(software))
+6. [JustinMind:](https://en.wikipedia.org/wiki/Justinmind_(software))
  - justinMind was used to make wireframes for this project.
-13. [Wix:](https://en.wikipedia.org/wiki/Wix.com)
+7. [Wix:](https://en.wikipedia.org/wiki/Wix.com)
   - Wix was use to make logo for this website
-14. [favicon.io:](https://favicon.io/favicon-converter/)
-  -  Favicon.io was used to create favicon for this website.
-15. [Pillow:](https://pypi.org/project/Pillow/)
+8. [Pillow:](https://pypi.org/project/Pillow/)
   - This library provides extensive file format support, an efficient internal representation, and fairly powerful image processing capabilities
+9. [dj-database-url:](https://pypi.org/project/django-database-url/)
+  - a supporting libraries for postreSQL
+10. [dj-rest-auth](https://dj-rest-auth.readthedocs.io/en/latest/introduction.html)
+  - a set of REST API endpoints to handle User Registration and Authentication tasks.
+11. [django-allauth:](https://django-allauth.readthedocs.io/en/latest/)
+  - an integrated set of Django applications addressing authentication, registration, account management as well as 3rd party (social) account authentication
+12. [django-cors-headers:](https://pypi.org/project/django-cors-headers/)
+  - a Django application for handling the server headers required for Cross-Origin Resource Sharing (CORS). A Django App that adds Cross-Origin Resource Sharing (CORS) headers to responses. This allows in-browser requests to your Django application from other origins.
+13. [gunicorn:](https://docs.gunicorn.org/en/stable)
+    - is the server that we use to run django on heroku
+14. [psycopg2:](https://pypi.org/project/psycopg2/)
+    - Psycopg is the most popular PostgreSQL database adapter for the Python programming language which is use to connect with postgresSQL
 
-
-asgiref==3.5.2
-cloudinary==1.30.0
-dj-database-url==0.5.0
-dj-rest-auth==2.2.5
-Django==3.2
-django-allauth==0.50.0
-django-cloudinary-storage==0.3.0
-django-cors-headers==3.13.0
-django-filter==2.4.0
-djangorestframework==3.14.0
-djangorestframework-simplejwt==5.2.2
-gunicorn==20.1.0
-oauthlib==3.2.2
-Pillow==9.3.0
-psycopg2==2.9.5
-PyJWT==2.6.0
-python3-openid==3.2.0
-pytz==2022.6
-requests-oauthlib==1.3.1
-sqlparse==0.4.3
 
 
 
