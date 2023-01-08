@@ -46,8 +46,49 @@
 ------
 
 ## Manual Testing
+### Profile
 
-** Sub-heading **
+1. logged out users can view list of profile
+2. logged out users can retrieve a profile with text search
+3. logged out users can't retrieve a profile with an invalid text search
+4. logged in users can edit a profile they own
+5. logged in users can't edit the profile they don't own
+6. logged in user can't delete any profile
+7. Only site Admin can delete all profile
+
+### Follow
+
+1. logged out users can view a list of followed profile and following
+2. logged out users can't follow a profile
+3. logged in users can view list of followed profile and following
+4. logged in users can follow other's profiles
+
+
+### Post
+
+1. logged out users can view list of posts
+2. logged in users can create a post
+3. logged out users can't create a post
+4. logged out users can retrieve a post with a valid id
+5. logged out users can't retrieve a post with an invalid id
+6. logged in users can update a post they own
+7. logged in users can't update a post they don't own
+
+### Comment
+
+1. logged out users can view comments
+2. logged in users can create comment
+3. logged out users can't create comment
+4. logged in users can update and delete all comment they own
+5. logged in users can't update a comment they don't own
+
+### like
+
+1. logged out users can view likes
+2. logged in users can view likes
+3. logged in users can like/unlike others comment
+4. logged out users can't like any comment
+
 
 ## Technologies Used
 
