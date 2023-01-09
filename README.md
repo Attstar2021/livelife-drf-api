@@ -46,7 +46,7 @@
 ------
 
 ## Manual Testing
-### Profiles
+### Profiles App
 
 1. logged out users can view list of profile
 2. logged out users can retrieve a profile with text search
@@ -56,7 +56,7 @@
 6. logged in user can't delete any profile
 7. Only site Admin can delete all profile
 
-### Followers
+### Followers App
 
 1. logged out users can view a list of followed profile and following
 2. logged out users can't follow a profile
@@ -64,7 +64,7 @@
 4. logged in users can follow other's profiles
 
 
-### Posts
+### Posts App
 
 1. logged out users can view list of posts
 2. logged in users can create a post
@@ -74,7 +74,7 @@
 6. logged in users can update a post they own
 7. logged in users can't update a post they don't own
 
-### Comments
+### Comments App
 
 1. logged out users can view comments
 2. logged in users can create comment
@@ -82,7 +82,7 @@
 4. logged in users can update and delete all comment they own
 5. logged in users can't update a comment they don't own
 
-### likes
+### likes App
 
 1. logged out users can view likes
 2. logged in users can view likes
